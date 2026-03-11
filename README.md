@@ -1,2 +1,0 @@
-# Doormeds-
-Medicines on Doorstep 
