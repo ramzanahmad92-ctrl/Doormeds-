@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doormeds | Verified Doorstep Pharmacy Delivery</title>
-  <meta name="description" content="Order authentic medicines and healthcare essentials delivered right to your doorstep. Verified by qualified registered pharmacists." />
   
-  <!-- Dynamic SVG Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4C18.7 4 8 14.7 8 28v24c0 3.3 2.7 6 6 6h36c3.3 0 6-2.7 6-6V28C56 14.7 45.3 4 32 4z' fill='%230284C7'/><path d='M32 10c-9.9 0-18 8.1-18 18v24h36V28c0-9.9-8.1-18-18-18z' fill='%23ffffff'/><rect x='28' y='18' width='8' height='26' rx='4' fill='%2310B981'/><rect x='19' y='27' width='26' height='8' rx='4' fill='%2310B981'/></svg>">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,12 +13,10 @@
   <style>
     :root {
       --brand-dark: #0B2545;
-      --brand-navy: #133E68;
       --brand-primary: #0284C7;
       --brand-primary-hover: #0369A1;
       --brand-accent: #059669;
       --brand-accent-soft: #D1FAE5;
-      --brand-amber: #D97706;
       --bg-page: #F8FAFC;
       --bg-surface: #FFFFFF;
       --border-subtle: #E2E8F0;
@@ -32,60 +27,24 @@
       --radius-md: 14px;
       --radius-lg: 20px;
       --shadow-subtle: 0 2px 10px -2px rgba(11, 37, 69, 0.06);
-      --shadow-elevated: 0 12px 30px -6px rgba(11, 37, 69, 0.12);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { background-color: var(--bg-page); color: var(--text-body); line-height: 1.5; padding-bottom: 96px; }
 
-    body {
-      background-color: var(--bg-page);
-      color: var(--text-body);
-      line-height: 1.5;
-      padding-bottom: 96px;
-    }
-
-    /* Top Announcement Bar */
     .top-strip {
       background: linear-gradient(90deg, #0B2545 0%, #133E68 100%);
       color: #E2E8F0;
-      font-size: 12.5px;
-      padding: 9px 16px;
+      font-size: 12px;
+      padding: 8px 16px;
       font-weight: 600;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      gap: 12px;
+      text-align: center;
     }
 
-    .top-strip-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .status-pulse {
-      width: 8px;
-      height: 8px;
-      background: #34D399;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
-      70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-    }
-
-    /* Modern Navigation Header */
     header {
       background: var(--bg-surface);
       border-bottom: 1px solid var(--border-subtle);
@@ -96,242 +55,136 @@
     }
 
     .nav-inner {
-      max-width: 1140px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 12px 20px;
+      padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 46px;
-      height: 46px;
-      flex-shrink: 0;
-      filter: drop-shadow(0 4px 8px rgba(2, 132, 199, 0.22));
-    }
-
-    .logo-text-col h1 {
-      font-size: 21px;
-      font-weight: 800;
-      color: var(--brand-dark);
-      letter-spacing: -0.6px;
-      line-height: 1.1;
-    }
-
-    .logo-text-col p {
-      font-size: 11px;
-      color: var(--brand-primary);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-top: 1px;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-mark { width: 44px; height: 44px; }
+    .logo-text-col h1 { font-size: 20px; font-weight: 800; color: var(--brand-dark); line-height: 1.1; }
+    .logo-text-col p { font-size: 10px; color: var(--brand-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
     .btn-header-call {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 18px;
+      gap: 6px;
+      padding: 8px 16px;
       background: #F0F9FF;
-      color: var(--brand-primary-hover);
+      color: var(--brand-primary);
       border: 1px solid #BAE6FD;
       text-decoration: none;
       font-weight: 700;
       font-size: 13px;
       border-radius: 50px;
-      transition: all 0.2s;
     }
 
-    .btn-header-call:hover {
-      background: #E0F2FE;
-    }
-
-    /* Offer Bar */
-    .offer-chip-bar {
-      background: #EFF6FF;
-      border-bottom: 1px solid #DBEAFE;
-      padding: 7px 16px;
-      text-align: center;
-      font-size: 12.5px;
-      color: #1E40AF;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .offer-tag {
-      background: #2563EB;
-      color: #FFFFFF;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-    }
-
-    /* Main Grid Layout */
     .container {
-      max-width: 1140px;
-      margin: 24px auto;
+      max-width: 1100px;
+      margin: 20px auto;
       padding: 0 16px;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 28px;
+      gap: 24px;
     }
 
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-        margin: 16px auto;
-      }
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; margin: 12px auto; }
     }
 
     .card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 26px;
+      padding: 22px;
       box-shadow: var(--shadow-subtle);
     }
 
-    /* Trust Pill & Heading */
     .trust-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-block;
       background: var(--brand-accent-soft);
       color: #065F46;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       padding: 4px 12px;
       border-radius: 50px;
-      margin-bottom: 12px;
-      border: 1px solid #A7F3D0;
+      margin-bottom: 10px;
     }
 
-    .main-title {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--text-heading);
-      letter-spacing: -0.5px;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
+    .main-title { font-size: 24px; font-weight: 800; color: var(--text-heading); margin-bottom: 4px; }
+    .sub-title { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
 
-    .sub-title {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    /* Fast Category Carousel Cards */
+    /* Category Cards */
     .category-scroll {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .cat-card {
       background: #F8FAFC;
-      border: 1px solid var(--border-subtle);
+      border: 1.5px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      padding: 12px 10px;
-      text-align: center;
+      padding: 12px;
       cursor: pointer;
+      text-align: center;
       transition: all 0.2s;
     }
 
-    .cat-card:hover {
+    .cat-card:hover, .cat-card:active {
       background: #F0F9FF;
-      border-color: #BAE6FD;
-      transform: translateY(-2px);
+      border-color: var(--brand-primary);
+      transform: scale(0.98);
     }
 
-    .cat-icon {
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
+    .cat-icon { font-size: 22px; margin-bottom: 4px; }
+    .cat-title { font-size: 13px; font-weight: 700; color: var(--text-heading); }
+    .cat-sub { font-size: 11px; color: var(--brand-primary); font-weight: 600; }
 
-    .cat-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-heading);
-    }
-
-    .cat-sub {
-      font-size: 10.5px;
-      color: var(--brand-primary);
-      font-weight: 600;
-    }
-
-    /* Order Switcher */
+    /* Switcher Tabs */
     .mode-tab-group {
       display: flex;
       background: #F1F5F9;
       border-radius: var(--radius-md);
       padding: 4px;
       gap: 4px;
-      margin-bottom: 20px;
-      border: 1px solid var(--border-subtle);
+      margin-bottom: 18px;
     }
 
     .mode-tab {
       flex: 1;
-      padding: 10px 14px;
+      padding: 10px 12px;
       border: none;
       background: transparent;
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 13.5px;
+      font-size: 13px;
       border-radius: 10px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s;
+      text-align: center;
     }
 
     .mode-tab.active {
       background: #FFFFFF;
       color: var(--brand-primary);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       font-weight: 700;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    /* Multi-File Dropzone */
+    /* Upload Zone */
     .rx-dropzone {
       border: 2px dashed #93C5FD;
       border-radius: var(--radius-md);
       background: #F0F9FF;
-      padding: 26px 16px;
+      padding: 22px 14px;
       text-align: center;
       cursor: pointer;
       position: relative;
-      transition: all 0.2s;
-      margin-bottom: 16px;
-    }
-
-    .rx-dropzone:hover {
-      background: #E0F2FE;
-      border-color: var(--brand-primary);
+      margin-bottom: 14px;
     }
 
     .rx-dropzone input[type="file"] {
@@ -344,125 +197,63 @@
       cursor: pointer;
     }
 
-    .upload-circle {
-      width: 48px;
-      height: 48px;
-      background: #FFFFFF;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 10px;
-      color: var(--brand-primary);
-      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.15);
-    }
-
-    /* Scanner Animation Effect */
-    .scanning-bar {
+    .preview-box {
       display: none;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, #0284C7, #10B981, #0284C7);
-      background-size: 200% 100%;
-      animation: scan 1.2s infinite;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-
-    @keyframes scan {
-      0% { background-position: 100% 0; }
-      100% { background-position: -100% 0; }
-    }
-
-    .preview-tray-multi {
-      display: none;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .preview-item {
-      display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       padding: 10px;
       background: #F8FAFC;
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
+      margin-bottom: 14px;
     }
 
-    .preview-item img {
-      width: 44px;
-      height: 44px;
-      object-fit: cover;
-      border-radius: 6px;
-      border: 1px solid var(--border-subtle);
-    }
+    .preview-box img { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; }
 
-    /* Form Fields */
-    .field-wrap {
-      margin-bottom: 16px;
-    }
-
-    .field-label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text-heading);
-      margin-bottom: 6px;
-    }
-
+    /* Fields */
+    .field-wrap { margin-bottom: 14px; }
+    .field-label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-heading); margin-bottom: 5px; }
     .field-input, .field-area {
       width: 100%;
-      padding: 12px 14px;
+      padding: 11px 13px;
       border: 1.5px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       font-size: 14px;
       outline: none;
       background: #FAFAFA;
-      transition: all 0.2s;
     }
 
     .field-input:focus, .field-area:focus {
       background: #FFFFFF;
       border-color: var(--brand-primary);
-      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
     }
 
-    /* OTC Chips */
-    .chips-label {
-      font-size: 11.5px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-
-    .chips-flex {
-      display: flex;
+    /* Selected Medicines Chip Container */
+    .selected-items-tray {
+      display: none;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
+      padding: 10px;
+      background: #EFF6FF;
+      border-radius: var(--radius-sm);
+      border: 1px solid #BFDBFE;
     }
 
-    .chip-btn {
-      font-size: 12px;
-      font-weight: 600;
-      background: #F1F5F9;
-      color: var(--text-body);
-      padding: 6px 12px;
-      border-radius: 50px;
-      cursor: pointer;
-      border: 1px solid var(--border-subtle);
-      transition: all 0.15s;
-    }
-
-    .chip-btn:hover {
-      background: #E0F2FE;
+    .selected-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFFFFF;
       color: var(--brand-primary-hover);
-      border-color: #BAE6FD;
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid #93C5FD;
     }
+
+    .selected-pill span { cursor: pointer; color: #EF4444; font-weight: 800; }
 
     /* Buttons */
     .btn-main-order {
@@ -475,21 +266,8 @@
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.28);
-      margin-bottom: 12px;
-      transition: transform 0.15s, filter 0.2s;
-    }
-
-    .btn-main-order:hover {
-      filter: brightness(1.05);
-    }
-
-    .btn-main-order:active {
-      transform: scale(0.985);
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
     }
 
     .btn-wa-direct {
@@ -502,85 +280,33 @@
       font-size: 14px;
       font-weight: 700;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
     }
 
-    /* Trust Column */
+    /* Features */
     .feature-card {
       display: flex;
-      gap: 14px;
-      padding: 15px;
+      gap: 12px;
+      padding: 12px;
       background: #F8FAFC;
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .feature-icon-box {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: #E0F2FE;
-      color: var(--brand-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+    .feature-card h4 { font-size: 13.5px; font-weight: 700; color: var(--brand-dark); }
+    .feature-card p { font-size: 12px; color: var(--text-muted); }
 
-    .feature-card h4 {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--brand-dark);
-      margin-bottom: 2px;
-    }
-
-    .feature-card p {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    /* Pharmacist Official Seal */
-    .pharmacist-stamp-box {
-      margin-top: 16px;
-      padding: 16px;
-      background: #F0FDF4;
-      border-radius: var(--radius-md);
-      border: 1px solid #BBF7D0;
-    }
-
-    .stamp-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      color: #166534;
-      font-size: 13px;
-      margin-bottom: 6px;
-    }
-
-    .stamp-text {
-      font-size: 12px;
-      color: #15803D;
-      line-height: 1.4;
-    }
-
-    /* Floating Bar */
+    /* Sticky Bottom Mobile Bar */
     .floating-hub {
       position: fixed;
-      bottom: 18px;
+      bottom: 14px;
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 32px);
-      max-width: 460px;
+      max-width: 440px;
       background: #FFFFFF;
       border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-elevated);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
       border-radius: 50px;
       padding: 6px 10px;
       display: flex;
@@ -591,201 +317,192 @@
 
     .floating-hub a {
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 9px 18px;
+      padding: 8px 18px;
       border-radius: 50px;
     }
 
-    .float-call {
-      color: var(--brand-dark);
-    }
+    .float-call { color: var(--brand-dark); }
+    .float-wa { background: #25D366; color: #FFFFFF; }
 
-    .float-wa {
-      background: #25D366;
-      color: #FFFFFF;
-    }
-
-    /* Notification Banner */
     .alert-box {
       display: none;
-      padding: 14px;
+      padding: 12px;
       border-radius: var(--radius-sm);
-      margin-top: 16px;
+      margin-top: 14px;
       font-size: 13px;
       font-weight: 600;
       text-align: center;
     }
+    .alert-box.success { background: #DCFCE7; color: #15803D; }
+    .alert-box.error { background: #FEE2E2; color: #B91C1C; }
 
-    .alert-box.success {
-      background: #DCFCE7;
-      color: #15803D;
-      border: 1px solid #BBF7D0;
+    /* Category Modal Popup */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: flex-end;
+      justify-content: center;
     }
 
-    .alert-box.error {
-      background: #FEE2E2;
-      color: #B91C1C;
-      border: 1px solid #FECACA;
+    .modal-sheet {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px 20px 0 0;
+      padding: 20px;
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideUp 0.25s ease-out;
     }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 10px;
+    }
+
+    .modal-title { font-size: 17px; font-weight: 800; color: var(--brand-dark); }
+    .modal-close {
+      background: #F1F5F9; border: none; border-radius: 50%;
+      width: 32px; height: 32px; font-size: 16px; cursor: pointer; font-weight: 700;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 8px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .item-name { font-size: 14px; font-weight: 600; color: var(--text-heading); }
+    .item-desc { font-size: 11px; color: var(--text-muted); }
+    .btn-add-item {
+      background: var(--brand-primary);
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-add-item:hover { background: var(--brand-primary-hover); }
   </style>
 </head>
 <body>
 
-  <!-- Announcement Bar -->
+  <!-- Top Strip -->
   <div class="top-strip">
-    <div class="top-strip-item">
-      <div class="status-pulse"></div>
-      <span>60–90 Mins Express Medicine Delivery</span>
-    </div>
-    <div class="top-strip-item">
-      <span>🛡️ 100% Genuine Supplies Directly from Licensed Stockists</span>
-    </div>
+    <span>⚡ Express 60–90 Mins Delivery</span>
+    <span>•</span>
+    <span>🛡️ Form 20/21 Licensed Pharmacy</span>
   </div>
 
-  <!-- Header with Upgraded 3D-Glow Doorstep Rx Logo -->
+  <!-- Header -->
   <header>
     <div class="nav-inner">
       <a href="#" class="logo-container">
-        <!-- SVG Vector Logo: Doorstep Care Cross with Rx stamp & 3D Layering -->
-        <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="doorFrameGrad" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#0284C7"/>
-              <stop offset="0.5" stop-color="#0369A1"/>
-              <stop offset="1" stop-color="#0B2545"/>
-            </linearGradient>
-            <linearGradient id="cross3D" x1="20" y1="18" x2="44" y2="46" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#34D399"/>
-              <stop offset="0.4" stop-color="#10B981"/>
-              <stop offset="1" stop-color="#047857"/>
-            </linearGradient>
-            <filter id="softGlow" x="14" y="12" width="36" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feGaussianBlur stdDeviation="2.5" result="blur"/>
-              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-            </filter>
-          </defs>
-          <!-- Doorstep Arch Shield -->
-          <path d="M32 4C18.193 4 7 15.193 7 29V53C7 56.866 10.134 60 14 60H50C53.866 60 57 56.866 57 53V29C57 15.193 45.807 4 32 4Z" fill="url(#doorFrameGrad)"/>
-          <!-- Inner White Door Opening -->
-          <path d="M32 10C21.507 10 13 18.507 13 29V55H51V29C51 18.507 42.493 10 32 10Z" fill="#FFFFFF"/>
-          
-          <!-- Rx Brand Micro-Stamp -->
-          <text x="16" y="24" fill="#0284C7" font-size="9" font-weight="800" font-family="'Plus Jakarta Sans', sans-serif">Rx</text>
-          
-          <!-- Glowing 3D Medical Cross -->
-          <g filter="url(#softGlow)">
-            <rect x="28" y="19" width="8" height="26" rx="4" fill="url(#cross3D)"/>
-            <rect x="19" y="28" width="26" height="8" rx="4" fill="url(#cross3D)"/>
-          </g>
-          <!-- Center Pulse White Dot -->
-          <circle cx="32" cy="32" r="2.5" fill="#FFFFFF"/>
+        <svg class="logo-mark" viewBox="0 0 64 64" fill="none">
+          <path d="M32 4C18.2 4 7 15.2 7 29V53C7 56.9 10.1 60 14 60H50C53.9 60 57 56.9 57 53V29C57 15.2 45.8 4 32 4Z" fill="#0284C7"/>
+          <path d="M32 10C21.5 10 13 18.5 13 29V55H51V29C51 18.5 42.5 10 32 10Z" fill="#FFFFFF"/>
+          <text x="16" y="24" fill="#0284C7" font-size="9" font-weight="800">Rx</text>
+          <rect x="28" y="19" width="8" height="26" rx="4" fill="#10B981"/>
+          <rect x="19" y="28" width="26" height="8" rx="4" fill="#10B981"/>
         </svg>
-
         <div class="logo-text-col">
           <h1>Doormeds</h1>
           <p>Verified Pharmacy Care</p>
         </div>
       </a>
-
-      <div class="header-actions">
-        <a href="tel:+917007000000" id="headerCallBtn" class="btn-header-call">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call Pharmacist
-        </a>
-      </div>
+      <a href="tel:+917007000000" id="headerCallBtn" class="btn-header-call">Call Pharmacist</a>
     </div>
   </header>
 
-  <!-- Interactive First-Order Promo Strip -->
-  <div class="offer-chip-bar">
-    <span class="offer-tag">FIRSTMED</span>
-    <span>Flat 15% OFF on your first prescription order | 🟢 Rapid Verification</span>
-  </div>
-
-  <!-- Core Page Body -->
+  <!-- Container -->
   <div class="container">
-
-    <!-- Left Column: Form & Interaction Hub -->
     <div class="card">
       <div class="trust-pill">Registered Pharmacist Verified</div>
       <h2 class="main-title">Fast Doorstep Medicine Order</h2>
-      <p class="sub-title">Snap a photo of your doctor's slip or choose healthcare essentials below. Our licensed team will verify and dispatch directly to your address.</p>
+      <p class="sub-title">Tap any category to choose essentials or upload your doctor's slip.</p>
 
-      <!-- Fast Category Selector Cards -->
+      <!-- Category Quick Selector Cards (Click to Open Items) -->
       <div class="category-scroll">
-        <div class="cat-card" onclick="insertItem('Monthly Sugar/BP Refill Pack')">
+        <div class="cat-card" onclick="openCategoryModal('chronic')">
           <div class="cat-icon">🩺</div>
           <div class="cat-title">Chronic Care</div>
-          <div class="cat-sub">BP & Diabetes Refill</div>
+          <div class="cat-sub">BP & Diabetes (View)</div>
         </div>
-        <div class="cat-card" onclick="insertItem('Baby Care Essentials Kit')">
+        <div class="cat-card" onclick="openCategoryModal('baby')">
           <div class="cat-icon">🍼</div>
           <div class="cat-title">Baby Care</div>
-          <div class="cat-sub">Diapers & Formula</div>
+          <div class="cat-sub">Diapers & Formula (View)</div>
         </div>
-        <div class="cat-card" onclick="insertItem('First Aid & Wound Care Box')">
+        <div class="cat-card" onclick="openCategoryModal('firstaid')">
           <div class="cat-icon">🩹</div>
           <div class="cat-title">First Aid</div>
-          <div class="cat-sub">Bandages & Antiseptic</div>
+          <div class="cat-sub">Bandages & Ointments (View)</div>
         </div>
-        <div class="cat-card" onclick="insertItem('Daily Multivitamin Zinc Immunity')">
+        <div class="cat-card" onclick="openCategoryModal('wellness')">
           <div class="cat-icon">💊</div>
           <div class="cat-title">Daily Wellness</div>
-          <div class="cat-sub">Vitamins & Minerals</div>
+          <div class="cat-sub">Vitamins & Immunity (View)</div>
         </div>
       </div>
 
-      <!-- Switcher Tabs -->
+      <!-- Mode Switcher -->
       <div class="mode-tab-group">
         <button type="button" class="mode-tab active" id="tabUpload" onclick="setMode('upload')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          Upload Prescription Slip
+          📷 Upload Prescription Slip
         </button>
         <button type="button" class="mode-tab" id="tabType" onclick="setMode('type')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
-          Type Medicine Names
+          ✍️ Type Medicine Names
         </button>
       </div>
 
-      <!-- Upload View with Multi-File & Scanner -->
+      <!-- Selected Items Tray -->
+      <div id="selectedTray" class="selected-items-tray"></div>
+
+      <!-- Upload View -->
       <div id="sectionUpload">
-        <div class="rx-dropzone" id="dropArea">
-          <input type="file" id="rxFile" accept="image/*,.pdf" multiple onchange="handleFiles(this)" />
-          <div class="upload-circle">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-          <p style="font-weight: 700; font-size: 14px; color: var(--brand-dark);">Tap to Upload Prescription Slip(s)</p>
-          <p style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">Supports Single or Multiple Images & Documents</p>
+        <div class="rx-dropzone">
+          <input type="file" id="rxFile" accept="image/*,.pdf" onchange="handleFile(this)" />
+          <p style="font-weight: 700; font-size: 14px; color: var(--brand-dark);">Tap to Upload Prescription Slip</p>
+          <p style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Supports Camera Photos & Documents</p>
         </div>
-
-        <div class="scanning-bar" id="scannerAnimation"></div>
-
-        <div class="preview-tray-multi" id="previewArea">
-          <!-- Dynamic Items Injected via JS -->
+        <div class="preview-box" id="previewArea">
+          <img id="previewImg" src="#" alt="Rx Preview" />
+          <div style="flex: 1;">
+            <p id="fileName" style="font-size: 13px; font-weight: 700;">Prescription.jpg</p>
+            <p style="font-size: 11px; color: var(--brand-accent); font-weight: 700;">File Ready</p>
+          </div>
+          <button type="button" onclick="clearFile()" style="background:none; border:none; color:red; cursor:pointer; font-weight:700;">✕</button>
         </div>
       </div>
 
       <!-- Type View -->
       <div id="sectionType" style="display: none;">
-        <div class="chips-label">Quick OTC Items</div>
-        <div class="chips-flex">
-          <span class="chip-btn" onclick="insertItem('Paracetamol 650mg')">+ Paracetamol 650</span>
-          <span class="chip-btn" onclick="insertItem('Multivitamin Zinc Caps')">+ Multivitamins</span>
-          <span class="chip-btn" onclick="insertItem('Antacid Gel / Tablets')">+ Antacids</span>
-          <span class="chip-btn" onclick="insertItem('ORS Electrolyte Sachet')">+ ORS</span>
-          <span class="chip-btn" onclick="insertItem('Pain Relief Balm')">+ Pain Relief</span>
-        </div>
         <div class="field-wrap">
-          <label class="field-label">Required Medicines & Quantities</label>
-          <textarea id="medList" class="field-area" rows="3" placeholder="e.g. Pantocid 40 (1 strip), Dolo 650 (10 tablets)..."></textarea>
+          <label class="field-label">Required Medicines & Quantities *</label>
+          <textarea id="medList" class="field-area" rows="3" placeholder="Type tablets, syrups, or select from categories above..."></textarea>
         </div>
       </div>
 
-      <!-- Contact Details -->
+      <!-- Contact Info -->
       <div class="field-wrap">
         <label class="field-label">Patient / Customer Name *</label>
         <input type="text" id="custName" class="field-input" placeholder="Enter complete name" />
@@ -798,4 +515,319 @@
 
       <div class="field-wrap">
         <label class="field-label">Delivery Address & Landmark *</label>
-        <textarea id="custAddress" class="field-area" rows="2" placeholder="House/Shop no., Colony, Landmark..."></
+        <textarea id="custAddress" class="field-area" rows="2" placeholder="House/Shop no., Colony, Landmark..."></textarea>
+      </div>
+
+      <!-- Action Buttons -->
+      <button type="button" class="btn-main-order" id="btnDirect" onclick="submitDirectOrder()">
+        Confirm Order (Instant Alert)
+      </button>
+
+      <button type="button" class="btn-wa-direct" onclick="submitWhatsAppFallback()">
+        Order via WhatsApp Instead
+      </button>
+
+      <div id="statusAlert" class="alert-box"></div>
+    </div>
+
+    <!-- Right Side Info -->
+    <div>
+      <div class="card">
+        <h3 style="font-size: 15px; font-weight: 800; color: var(--brand-dark); margin-bottom: 12px;">Standard Pharmacy Assurance</h3>
+        <div class="feature-card">
+          <div>
+            <h4>100% Genuine Supplies</h4>
+            <p>Direct sourcing from authorized distributors.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div>
+            <h4>Registered Pharmacist Review</h4>
+            <p>Every schedule drug verified before delivery.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div>
+            <h4>Express Doorstep Delivery</h4>
+            <p>Safe and fast packaging directly to your home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Floating Bar -->
+  <div class="floating-hub">
+    <a href="tel:+917007000000" id="floatCallBtn" class="float-call">📞 Call Us</a>
+    <a href="https://wa.me/917007000000" id="floatWaBtn" target="_blank" class="float-wa">💬 WhatsApp</a>
+  </div>
+
+  <!-- Category Items Modal Popup -->
+  <div class="modal-overlay" id="categoryModal" onclick="closeCategoryModal(event)">
+    <div class="modal-sheet" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Select Medicines</h3>
+        <button class="modal-close" onclick="closeCategoryModal()">✕</button>
+      </div>
+      <div id="modalItemsList"></div>
+    </div>
+  </div>
+
+  <script>
+    const PHARMACY_WHATSAPP = "917007000000";
+    const TELEGRAM_BOT_TOKEN = "8441866785:AAFp4Twh64krFHYtyMN3TMKpk83DRFXBDXs";
+    const TELEGRAM_CHAT_ID = "1541466517";
+
+    document.getElementById('headerCallBtn').href = 'tel:+' + PHARMACY_WHATSAPP;
+    document.getElementById('floatCallBtn').href = 'tel:+' + PHARMACY_WHATSAPP;
+    document.getElementById('floatWaBtn').href = 'https://wa.me/' + PHARMACY_WHATSAPP;
+
+    let activeMode = 'upload';
+    let uploadedFile = null;
+    let selectedMedicines = [];
+
+    // Catalog Data
+    const categoryData = {
+      chronic: {
+        title: "🩺 Chronic Care (Diabetes & BP)",
+        items: [
+          { name: "Blood Glucose Test Strips (Pack of 50)", desc: "Accu-Chek / OneTouch Compatible" },
+          { name: "Digital Blood Pressure Monitor", desc: "Automatic BP Cuff Machine" },
+          { name: "Sugar Free Gold Pellets", desc: "Low Calorie Sweetener 500 Tabs" },
+          { name: "Monthly Diabetes Tablet Refill", desc: "Metformin / Glimepiride (Specify strength)" },
+          { name: "Monthly Blood Pressure Refill", desc: "Telmisartan / Amlodipine (Specify strength)" }
+        ]
+      },
+      baby: {
+        title: "🍼 Baby Care Essentials",
+        items: [
+          { name: "Pampers Baby Diaper Pants (M/L)", desc: "12-Hour Protection Pants" },
+          { name: "Johnson's Baby Gentle Wipes (72s)", desc: "Alcohol-Free & Paraben-Free" },
+          { name: "Nestle Cerelac Wheat-Apple (300g)", desc: "Complementary Food for Babies" },
+          { name: "Himalaya Baby Lotion (200ml)", desc: "Nourishing Herbal Care" },
+          { name: "Gripe Water / Colic Aid Drops", desc: "Relief from infant stomach gas" }
+        ]
+      },
+      firstaid: {
+        title: "🩹 First Aid & Antiseptics",
+        items: [
+          { name: "Dettol Antiseptic Liquid (250ml)", desc: "Wound Disinfection & Cleaning" },
+          { name: "Hansaplast Bandages (Pack of 10)", desc: "Waterproof Wound Protection" },
+          { name: "Volini / Moov Fast Pain Spray", desc: "Instant Joint & Muscle Relief" },
+          { name: "Cotton Roll & Crepe Bandage (10cm)", desc: "Sterile dressing and sprain wrap" },
+          { name: "Betadine 5% Antiseptic Ointment", desc: "Povidone-Iodine Microbicidal" }
+        ]
+      },
+      wellness: {
+        title: "💊 Daily Wellness & Immunity",
+        items: [
+          { name: "Limcee Vitamin C 500mg (15 Chewable)", desc: "Daily Immunity Booster" },
+          { name: "Zincovit Multi-Mineral Tablets (15s)", desc: "Essential Zinc + Vitamin Formulation" },
+          { name: "Dabur Chyawanprash (500g)", desc: "Immunity with pure herbal Amla" },
+          { name: "ORS Electral Sachet (Oral Salts)", desc: "Rapid Dehydration Recovery" },
+          { name: "Digene Gel Antacid (Mint 200ml)", desc: "Fast Relief from Acidity & Gas" }
+        ]
+      }
+    };
+
+    function openCategoryModal(catKey) {
+      const data = categoryData[catKey];
+      if (!data) return;
+
+      document.getElementById('modalTitle').innerText = data.title;
+      const list = document.getElementById('modalItemsList');
+      list.innerHTML = '';
+
+      data.items.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'item-row';
+        row.innerHTML = `
+          <div>
+            <div class="item-name">${item.name}</div>
+            <div class="item-desc">${item.desc}</div>
+          </div>
+          <button type="button" class="btn-add-item" onclick="addItemToOrder('${item.name}')">+ Add</button>
+        `;
+        list.appendChild(row);
+      });
+
+      document.getElementById('categoryModal').style.display = 'flex';
+    }
+
+    function closeCategoryModal() {
+      document.getElementById('categoryModal').style.display = 'none';
+    }
+
+    function addItemToOrder(itemName) {
+      if (!selectedMedicines.includes(itemName)) {
+        selectedMedicines.push(itemName);
+      }
+      renderSelectedItems();
+      closeCategoryModal();
+
+      // Auto switch to type mode
+      setMode('type');
+    }
+
+    function removeItemFromOrder(index) {
+      selectedMedicines.splice(index, 1);
+      renderSelectedItems();
+    }
+
+    function renderSelectedItems() {
+      const tray = document.getElementById('selectedTray');
+      const medList = document.getElementById('medList');
+
+      if (selectedMedicines.length === 0) {
+        tray.style.display = 'none';
+        tray.innerHTML = '';
+        medList.value = '';
+        return;
+      }
+
+      tray.style.display = 'flex';
+      tray.innerHTML = '<strong style="width:100%; font-size:12px; color:#1E40AF; margin-bottom:4px;">Selected Items:</strong>';
+
+      selectedMedicines.forEach((med, idx) => {
+        const pill = document.createElement('span');
+        pill.className = 'selected-pill';
+        pill.innerHTML = `${med} <span onclick="removeItemFromOrder(${idx})">✕</span>`;
+        tray.appendChild(pill);
+      });
+
+      medList.value = selectedMedicines.join(', ');
+    }
+
+    function setMode(mode) {
+      activeMode = mode;
+      document.getElementById('tabUpload').classList.toggle('active', mode === 'upload');
+      document.getElementById('tabType').classList.toggle('active', mode === 'type');
+      document.getElementById('sectionUpload').style.display = (mode === 'upload') ? 'block' : 'none';
+      document.getElementById('sectionType').style.display = (mode === 'type') ? 'block' : 'none';
+    }
+
+    function handleFile(input) {
+      if (input.files && input.files[0]) {
+        uploadedFile = input.files[0];
+        document.getElementById('fileName').innerText = uploadedFile.name;
+        if (uploadedFile.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = e => {
+            document.getElementById('previewImg').src = e.target.result;
+            document.getElementById('previewArea').style.display = 'flex';
+          };
+          reader.readAsDataURL(uploadedFile);
+        } else {
+          document.getElementById('previewArea').style.display = 'flex';
+        }
+      }
+    }
+
+    function clearFile() {
+      uploadedFile = null;
+      document.getElementById('rxFile').value = '';
+      document.getElementById('previewArea').style.display = 'none';
+    }
+
+    function validateFields(name, phone, address) {
+      if (!name.trim()) { alert('Please enter patient/customer name'); return false; }
+      if (!phone.trim() || phone.trim().length < 10) { alert('Please enter a valid 10-digit mobile number'); return false; }
+      if (!address.trim()) { alert('Please enter delivery address'); return false; }
+      if (activeMode === 'upload' && !uploadedFile && selectedMedicines.length === 0) { 
+        alert('Please choose a prescription slip or select medicines from categories'); return false; 
+      }
+      if (activeMode === 'type' && !document.getElementById('medList').value.trim()) { 
+        alert('Please type or select at least one medicine'); return false; 
+      }
+      return true;
+    }
+
+    async function submitDirectOrder() {
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const address = document.getElementById('custAddress').value;
+      const medicines = document.getElementById('medList').value;
+
+      if (!validateFields(name, phone, address)) return;
+
+      const btn = document.getElementById('btnDirect');
+      const alertBox = document.getElementById('statusAlert');
+      btn.disabled = true;
+      btn.innerText = "Transmitting Order...";
+
+      const captionText = `🚨 *NEW DOORMEDS ORDER*\n\n` +
+                          `👤 *Customer:* ${name}\n` +
+                          `📞 *Phone:* ${phone}\n` +
+                          `📍 *Address:* ${address}\n` +
+                          `💊 *Mode:* ${activeMode.toUpperCase()}\n` +
+                          (medicines ? `📝 *Medicines:* ${medicines}\n` : '') +
+                          `⏰ *Time:* ${new Date().toLocaleTimeString()}`;
+
+      try {
+        let endpoint = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/`;
+
+        if (activeMode === 'upload' && uploadedFile) {
+          const formData = new FormData();
+          formData.append('chat_id', TELEGRAM_CHAT_ID);
+          formData.append('photo', uploadedFile);
+          formData.append('caption', captionText);
+          formData.append('parse_mode', 'Markdown');
+          await fetch(endpoint + 'sendPhoto', { method: 'POST', body: formData });
+        } else {
+          await fetch(endpoint + 'sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: captionText,
+              parse_mode: 'Markdown'
+            })
+          });
+        }
+
+        alertBox.className = 'alert-box success';
+        alertBox.style.display = 'block';
+        alertBox.innerHTML = '✅ Order successfully sent! Our pharmacist will call you shortly.';
+
+        document.getElementById('custName').value = '';
+        document.getElementById('custPhone').value = '';
+        document.getElementById('custAddress').value = '';
+        document.getElementById('medList').value = '';
+        selectedMedicines = [];
+        renderSelectedItems();
+        clearFile();
+      } catch (err) {
+        alertBox.className = 'alert-box error';
+        alertBox.style.display = 'block';
+        alertBox.innerHTML = '⚠️ Transmission failed. Please order via WhatsApp below.';
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "Confirm Order (Instant Alert)";
+      }
+    }
+
+    function submitWhatsAppFallback() {
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const address = document.getElementById('custAddress').value;
+      const medicines = document.getElementById('medList').value;
+
+      if (!validateFields(name, phone, address)) return;
+
+      let msg = `*New Order - Doormeds Pharmacy*%0A%0A` +
+                `*Name:* ${encodeURIComponent(name)}%0A` +
+                `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                `*Address:* ${encodeURIComponent(address)}%0A` +
+                `*Mode:* ${activeMode}%0A`;
+
+      if (medicines) {
+        msg += `*Medicines:* ${encodeURIComponent(medicines)}%0A`;
+      } else {
+        msg += `_(Sending prescription slip photo in chat)_%0A`;
+      }
+
+      window.open(`https://wa.me/${PHARMACY_WHATSAPP}?text=${msg}`, '_blank');
+    }
+  </script>
+</body>
+</html>
