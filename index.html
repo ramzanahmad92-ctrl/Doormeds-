@@ -3,32 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doormeds | Premium Healthcare & Pharmacy Doorstep Delivery</title>
-  <meta name="description" content="Order authentic medicines and wellness essentials with instant prescription upload and rapid delivery by qualified pharmacists." />
+  <title>Doormeds | Verified Doorstep Pharmacy Delivery</title>
+  <meta name="description" content="Authentic medicines and healthcare essentials delivered right to your doorstep. Upload prescription or order OTC items verified by qualified pharmacists." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #0284C7;
-      --primary-dark: #0369A1;
-      --primary-light: #E0F2FE;
-      --secondary: #0F172A;
-      --accent: #10B981;
-      --accent-soft: #D1FAE5;
-      --warning: #F59E0B;
-      --text-main: #0F172A;
+      --brand-dark: #0B2545;
+      --brand-navy: #133E68;
+      --brand-primary: #0284C7;
+      --brand-primary-hover: #0369A1;
+      --brand-accent: #059669;
+      --brand-accent-soft: #D1FAE5;
+      --brand-warm: #D97706;
+      --bg-page: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --border-subtle: #E2E8F0;
+      --border-focus: #38BDF8;
+      --text-heading: #0F172A;
+      --text-body: #334155;
       --text-muted: #64748B;
-      --bg-body: #F8FAFC;
-      --bg-card: #FFFFFF;
-      --border-color: #E2E8F0;
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
-      --shadow-lg: 0 10px 25px -4px rgba(15, 23, 42, 0.12);
+      --shadow-subtle: 0 2px 8px -2px rgba(11, 37, 69, 0.06);
+      --shadow-elevated: 0 12px 30px -6px rgba(11, 37, 69, 0.12);
     }
 
     * {
@@ -40,178 +41,196 @@
     }
 
     body {
-      background-color: var(--bg-body);
-      color: var(--text-main);
+      background-color: var(--bg-page);
+      color: var(--text-body);
       line-height: 1.5;
-      padding-bottom: 90px;
+      padding-bottom: 96px;
     }
 
-    /* Top Strip */
+    /* Top Priority Bar */
     .top-strip {
-      background: var(--secondary);
-      color: #F8FAFC;
-      font-size: 13px;
-      padding: 8px 16px;
-      text-align: center;
+      background: linear-gradient(90deg, #0B2545 0%, #133E68 100%);
+      color: #E2E8F0;
+      font-size: 12.5px;
+      padding: 9px 16px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
-      font-weight: 500;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    .top-strip span {
+    .top-strip-item {
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
 
-    /* Header */
+    .status-pulse {
+      width: 8px;
+      height: 8px;
+      background: #34D399;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    }
+
+    /* Modern Navigation Header */
     header {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-subtle);
     }
 
-    .nav-container {
-      max-width: 1100px;
+    .nav-inner {
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .brand-logo {
+    .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
     }
 
-    .brand-logo .symbol {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--primary), #0284c7);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 800;
-      font-size: 22px;
-      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
     }
 
-    .brand-text h1 {
-      font-size: 20px;
+    .logo-text-col h1 {
+      font-size: 21px;
       font-weight: 800;
-      color: var(--secondary);
-      letter-spacing: -0.5px;
+      color: var(--brand-dark);
+      letter-spacing: -0.6px;
+      line-height: 1.1;
     }
 
-    .brand-text p {
+    .logo-text-col p {
       font-size: 11px;
-      color: var(--primary);
+      color: var(--brand-primary);
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
+      margin-top: 1px;
     }
 
-    .header-contact {
+    .header-actions {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .pill-call-btn {
+    .btn-header-call {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
-      background: var(--primary-light);
-      color: var(--primary-dark);
+      padding: 8px 18px;
+      background: #F0F9FF;
+      color: var(--brand-primary-hover);
+      border: 1px solid #BAE6FD;
       text-decoration: none;
       font-weight: 700;
       font-size: 13px;
       border-radius: 50px;
-      transition: all 0.2s ease;
+      transition: all 0.2s;
     }
 
-    /* Main Container */
+    .btn-header-call:hover {
+      background: #E0F2FE;
+    }
+
+    /* Layout Containers */
     .container {
-      max-width: 1100px;
-      margin: 24px auto;
+      max-width: 1140px;
+      margin: 28px auto;
       padding: 0 16px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 28px;
     }
 
-    @media (max-width: 880px) {
+    @media (max-width: 900px) {
       .container {
         grid-template-columns: 1fr;
+        margin: 18px auto;
       }
     }
 
-    /* Hero & Card Styles */
     .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 24px;
-      box-shadow: var(--shadow-sm);
+      padding: 26px;
+      box-shadow: var(--shadow-subtle);
     }
 
-    .hero-badge {
+    /* Trust Badge & Headline */
+    .trust-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--accent-soft);
+      background: var(--brand-accent-soft);
       color: #065F46;
       font-size: 12px;
       font-weight: 700;
       padding: 4px 12px;
       border-radius: 50px;
       margin-bottom: 12px;
+      border: 1px solid #A7F3D0;
     }
 
-    .main-heading {
-      font-size: 28px;
+    .main-title {
+      font-size: 26px;
       font-weight: 800;
-      color: var(--secondary);
-      line-height: 1.25;
-      margin-bottom: 8px;
+      color: var(--text-heading);
       letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin-bottom: 6px;
     }
 
-    .sub-heading {
-      font-size: 14px;
+    .sub-title {
+      font-size: 13.5px;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     /* Order Switcher */
-    .mode-switch {
+    .mode-tab-group {
       display: flex;
       background: #F1F5F9;
       border-radius: var(--radius-md);
       padding: 4px;
       gap: 4px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-subtle);
     }
 
-    .mode-btn {
+    .mode-tab {
       flex: 1;
       padding: 10px 14px;
       border: none;
       background: transparent;
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 13px;
+      font-size: 13.5px;
       border-radius: 10px;
       cursor: pointer;
       display: flex;
@@ -221,32 +240,32 @@
       transition: all 0.2s;
     }
 
-    .mode-btn.active {
+    .mode-tab.active {
       background: #FFFFFF;
-      color: var(--primary-dark);
-      box-shadow: var(--shadow-sm);
+      color: var(--brand-primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       font-weight: 700;
     }
 
-    /* Upload Area */
-    .upload-zone {
+    /* Dropzone */
+    .rx-dropzone {
       border: 2px dashed #93C5FD;
       border-radius: var(--radius-md);
-      background: #F8FAFC;
-      padding: 24px 16px;
+      background: #F0F9FF;
+      padding: 26px 16px;
       text-align: center;
       cursor: pointer;
       position: relative;
-      transition: all 0.2s ease;
+      transition: all 0.2s;
       margin-bottom: 16px;
     }
 
-    .upload-zone:hover {
-      background: #EFF6FF;
-      border-color: var(--primary);
+    .rx-dropzone:hover {
+      background: #E0F2FE;
+      border-color: var(--brand-primary);
     }
 
-    .upload-zone input[type="file"] {
+    .rx-dropzone input[type="file"] {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -256,106 +275,108 @@
       cursor: pointer;
     }
 
-    .upload-icon {
+    .upload-circle {
       width: 48px;
       height: 48px;
-      background: var(--primary-light);
-      color: var(--primary);
+      background: #FFFFFF;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 12px;
+      margin: 0 auto 10px;
+      color: var(--brand-primary);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.15);
     }
 
-    .preview-box {
+    .preview-tray {
       display: none;
       align-items: center;
       gap: 12px;
       padding: 12px;
-      background: var(--primary-light);
+      background: #F8FAFC;
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       margin-bottom: 18px;
     }
 
-    .preview-box img {
-      width: 45px;
-      height: 45px;
+    .preview-tray img {
+      width: 48px;
+      height: 48px;
       object-fit: cover;
       border-radius: 6px;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--border-subtle);
     }
 
     /* Form Fields */
-    .form-group {
+    .field-wrap {
       margin-bottom: 16px;
     }
 
-    .form-label {
+    .field-label {
       display: block;
       font-size: 13px;
-      font-weight: 600;
-      color: var(--text-main);
+      font-weight: 700;
+      color: var(--text-heading);
       margin-bottom: 6px;
     }
 
-    .form-input, .form-textarea {
+    .field-input, .field-area {
       width: 100%;
       padding: 12px 14px;
-      border: 1.5px solid var(--border-color);
+      border: 1.5px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       font-size: 14px;
       outline: none;
       background: #FAFAFA;
-      transition: border-color 0.2s;
+      transition: all 0.2s;
     }
 
-    .form-input:focus, .form-textarea:focus {
+    .field-input:focus, .field-area:focus {
       background: #FFFFFF;
-      border-color: var(--primary);
+      border-color: var(--brand-primary);
       box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
     }
 
     /* OTC Chips */
-    .chips-title {
-      font-size: 12px;
+    .chips-label {
+      font-size: 11.5px;
       font-weight: 700;
       color: var(--text-muted);
-      margin-bottom: 8px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      margin-bottom: 8px;
     }
 
-    .chips-wrap {
+    .chips-flex {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-bottom: 16px;
     }
 
-    .chip-item {
+    .chip-btn {
       font-size: 12px;
       font-weight: 600;
       background: #F1F5F9;
-      color: var(--text-main);
+      color: var(--text-body);
       padding: 6px 12px;
       border-radius: 50px;
       cursor: pointer;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--border-subtle);
       transition: all 0.15s;
     }
 
-    .chip-item:hover {
-      background: var(--primary-light);
-      color: var(--primary-dark);
+    .chip-btn:hover {
+      background: #E0F2FE;
+      color: var(--brand-primary-hover);
       border-color: #BAE6FD;
     }
 
-    /* Action Buttons */
-    .btn-submit-primary {
+    /* Submit Buttons */
+    .btn-main-order {
       width: 100%;
       padding: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
       color: #FFFFFF;
       border: none;
       border-radius: var(--radius-sm);
@@ -366,16 +387,20 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.28);
       margin-bottom: 12px;
-      transition: all 0.2s ease;
+      transition: transform 0.15s, filter 0.2s;
     }
 
-    .btn-submit-primary:hover {
+    .btn-main-order:hover {
       filter: brightness(1.05);
     }
 
-    .btn-whatsapp-fallback {
+    .btn-main-order:active {
+      transform: scale(0.985);
+    }
+
+    .btn-wa-direct {
       width: 100%;
       padding: 13px;
       background: #25D366;
@@ -389,119 +414,86 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
     }
 
-    /* Trust & Info Sidebars */
-    .trust-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .trust-card {
+    /* Trust Column */
+    .feature-card {
       display: flex;
-      gap: 12px;
-      padding: 14px;
+      gap: 14px;
+      padding: 15px;
       background: #F8FAFC;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
+      margin-bottom: 12px;
     }
 
-    .trust-card .icon-box {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--primary-light);
-      color: var(--primary);
+    .feature-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #E0F2FE;
+      color: var(--brand-primary);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
 
-    .trust-card h4 {
+    .feature-card h4 {
       font-size: 14px;
       font-weight: 700;
-      color: var(--secondary);
+      color: var(--brand-dark);
       margin-bottom: 2px;
     }
 
-    .trust-card p {
-      font-size: 12px;
+    .feature-card p {
+      font-size: 12.5px;
       color: var(--text-muted);
       line-height: 1.4;
     }
 
-    /* Testimonial Section */
-    .review-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      margin-top: 16px;
-    }
-
-    .stars {
-      color: #F59E0B;
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-
-    .review-text {
-      font-size: 13px;
-      color: var(--text-main);
-      font-style: italic;
-      margin-bottom: 6px;
-    }
-
-    .review-author {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
-    }
-
-    /* Floating Action Bar */
-    .floating-bar {
+    /* Floating Actions */
+    .floating-hub {
       position: fixed;
-      bottom: 16px;
+      bottom: 18px;
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 32px);
-      max-width: 480px;
+      max-width: 460px;
       background: #FFFFFF;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-elevated);
       border-radius: 50px;
-      padding: 6px 12px;
+      padding: 6px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       z-index: 999;
     }
 
-    .floating-bar a {
+    .floating-hub a {
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
-      padding: 8px 16px;
+      padding: 9px 18px;
       border-radius: 50px;
     }
 
-    .floating-call {
-      color: var(--secondary);
+    .float-call {
+      color: var(--brand-dark);
     }
 
-    .floating-wa {
+    .float-wa {
       background: #25D366;
-      color: #fff;
+      color: #FFFFFF;
     }
 
-    /* Status Notifications */
-    .status-alert {
+    /* Notification Banner */
+    .alert-box {
       display: none;
       padding: 14px;
       border-radius: var(--radius-sm);
@@ -511,13 +503,13 @@
       text-align: center;
     }
 
-    .status-alert.success {
+    .alert-box.success {
       background: #DCFCE7;
       color: #15803D;
       border: 1px solid #BBF7D0;
     }
 
-    .status-alert.error {
+    .alert-box.error {
       background: #FEE2E2;
       color: #B91C1C;
       border: 1px solid #FECACA;
@@ -526,48 +518,81 @@
 </head>
 <body>
 
-  <!-- Top Announcement -->
+  <!-- Announcement Bar -->
   <div class="top-strip">
-    <span>⚡ Express Medicine Delivery within 60–90 Mins</span>
-    <span>•</span>
-    <span>🛡️ Form 20/21 Licensed Pharmacy</span>
+    <div class="top-strip-item">
+      <div class="status-pulse"></div>
+      <span>60–90 Mins Express Medicine Delivery</span>
+    </div>
+    <div class="top-strip-item">
+      <span>🛡️ 100% Genuine Inventory Directly from Licensed Stockists</span>
+    </div>
   </div>
 
-  <!-- Header -->
+  <!-- Header with Option 2 "Doorstep Rx Care" Logo -->
   <header>
-    <div class="nav-container">
-      <a href="#" class="brand-logo">
-        <div class="symbol">D</div>
-        <div class="brand-text">
+    <div class="nav-inner">
+      <a href="#" class="logo-container">
+        <!-- SVG Vector Logo: Doorstep Care Cross -->
+        <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="doorGrad" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0284C7"/>
+              <stop offset="1" stop-color="#0F172A"/>
+            </linearGradient>
+            <linearGradient id="crossGrad" x1="22" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#10B981"/>
+              <stop offset="1" stop-color="#059669"/>
+            </linearGradient>
+            <filter id="glow" x="12" y="10" width="40" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <!-- Doorstep Arch Shield -->
+          <path d="M32 6C18.745 6 8 16.745 8 30V52C8 55.314 10.686 58 14 58H50C53.314 58 56 55.314 56 52V30C56 16.745 45.255 6 32 6Z" fill="url(#doorGrad)"/>
+          <!-- Inner Door Opening -->
+          <path d="M32 12C22.059 12 14 20.059 14 30V54H50V30C50 20.059 41.941 12 32 12Z" fill="#FFFFFF"/>
+          <!-- Glowing Medical Cross -->
+          <g filter="url(#glow)">
+            <rect x="28" y="20" width="8" height="24" rx="4" fill="url(#crossGrad)"/>
+            <rect x="20" y="28" width="24" height="8" rx="4" fill="url(#crossGrad)"/>
+          </g>
+          <!-- Center Pulse White Dot -->
+          <circle cx="32" cy="32" r="2.5" fill="#FFFFFF"/>
+        </svg>
+
+        <div class="logo-text-col">
           <h1>Doormeds</h1>
-          <p>Online Pharmacy</p>
+          <p>Verified Pharmacy Care</p>
         </div>
       </a>
-      <div class="header-contact">
-        <a href="tel:+917007000000" id="headerCallBtn" class="pill-call-btn">
+
+      <div class="header-actions">
+        <a href="tel:+917007000000" id="headerCallBtn" class="btn-header-call">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Direct Call
+          Call Pharmacist
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Content Section -->
+  <!-- Core Page Body -->
   <div class="container">
-    
-    <!-- Left Column: Ordering Hub -->
+
+    <!-- Left Column: Form & Interaction Hub -->
     <div class="card">
-      <div class="hero-badge">Verified Healthcare Service</div>
-      <h2 class="main-heading">Fast, Authentic Pharmacy Delivery</h2>
-      <p class="sub-heading">Upload your physician's prescription or type required healthcare items. Our certified pharmacist will verify and dispense your medicines.</p>
+      <div class="trust-pill">Registered Pharmacist Verified</div>
+      <h2 class="main-title">Fast Doorstep Medicine Order</h2>
+      <p class="sub-title">Snap a photo of your doctor's slip or type the required medicines below. Our licensed team will verify and deliver directly to your address.</p>
 
       <!-- Switcher Tabs -->
-      <div class="mode-switch">
-        <button type="button" class="mode-btn active" id="tabUpload" onclick="setMode('upload')">
+      <div class="mode-tab-group">
+        <button type="button" class="mode-tab active" id="tabUpload" onclick="setMode('upload')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           Upload Prescription
         </button>
-        <button type="button" class="mode-btn" id="tabType" onclick="setMode('type')">
+        <button type="button" class="mode-tab" id="tabType" onclick="setMode('type')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
           Type Medicine Names
         </button>
@@ -575,116 +600,113 @@
 
       <!-- Upload View -->
       <div id="sectionUpload">
-        <div class="upload-zone" id="dropArea">
+        <div class="rx-dropzone" id="dropArea">
           <input type="file" id="rxFile" accept="image/*,.pdf" onchange="handleFile(this)" />
-          <div class="upload-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <div class="upload-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           </div>
-          <p style="font-weight: 700; font-size: 14px;">Tap here to upload Doctor's Slip</p>
-          <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Supports Camera Photos & Images</p>
+          <p style="font-weight: 700; font-size: 14px; color: var(--brand-dark);">Tap to Upload Prescription Slip</p>
+          <p style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">Supports Camera Photos & Documents</p>
         </div>
 
-        <div class="preview-box" id="previewArea">
+        <div class="preview-tray" id="previewArea">
           <img id="previewImg" src="#" alt="Rx Preview" />
           <div style="flex: 1;">
-            <p id="fileName" style="font-size: 13px; font-weight: 700;">Prescription.jpg</p>
-            <p style="font-size: 11px; color: var(--accent); font-weight: 600;">Ready to transmit</p>
+            <p id="fileName" style="font-size: 13px; font-weight: 700; color: var(--text-heading);">Prescription.jpg</p>
+            <p style="font-size: 11px; color: var(--brand-accent); font-weight: 700;">File Selected</p>
           </div>
-          <button type="button" onclick="clearFile()" style="background:none; border:none; color:red; cursor:pointer; font-weight:700;">✕</button>
+          <button type="button" onclick="clearFile()" style="background:none; border:none; color:#EF4444; cursor:pointer; font-weight:700; font-size:16px;">✕</button>
         </div>
       </div>
 
       <!-- Type View -->
       <div id="sectionType" style="display: none;">
-        <div class="chips-title">Instant OTC & Wellness Selector</div>
-        <div class="chips-wrap">
-          <span class="chip-item" onclick="insertItem('Paracetamol 650mg')">+ Paracetamol 650</span>
-          <span class="chip-item" onclick="insertItem('Multivitamin Zinc Caps')">+ Multivitamins</span>
-          <span class="chip-item" onclick="insertItem('Antacid Gel / Tablets')">+ Antacids</span>
-          <span class="chip-item" onclick="insertItem('Baby Diapers (Medium)')">+ Diapers</span>
-          <span class="chip-item" onclick="insertItem('ORS Electrolyte Sachet')">+ ORS</span>
-          <span class="chip-item" onclick="insertItem('Pain Relief Ointment')">+ Pain Balm</span>
+        <div class="chips-label">Quick Healthcare Essentials</div>
+        <div class="chips-flex">
+          <span class="chip-btn" onclick="insertItem('Paracetamol 650mg')">+ Paracetamol 650</span>
+          <span class="chip-btn" onclick="insertItem('Multivitamin Zinc Caps')">+ Multivitamins</span>
+          <span class="chip-btn" onclick="insertItem('Antacid Gel / Tablets')">+ Antacids</span>
+          <span class="chip-btn" onclick="insertItem('Baby Diapers (Medium)')">+ Diapers</span>
+          <span class="chip-btn" onclick="insertItem('ORS Electrolyte Sachet')">+ ORS</span>
+          <span class="chip-btn" onclick="insertItem('Pain Relief Balm')">+ Pain Relief</span>
         </div>
-        <div class="form-group">
-          <label class="form-label">Type Medicines & Quantities</label>
-          <textarea id="medList" class="form-textarea" rows="3" placeholder="e.g. Pantocid 40mg (1 strip), Dolo 650 (10 tablets)..."></textarea>
+        <div class="field-wrap">
+          <label class="field-label">Required Medicines & Quantities</label>
+          <textarea id="medList" class="field-area" rows="3" placeholder="e.g. Pantocid 40 (1 strip), Dolo 650 (10 tablets)..."></textarea>
         </div>
       </div>
 
-      <!-- Customer Details -->
-      <div class="form-group">
-        <label class="form-label">Patient / Customer Name *</label>
-        <input type="text" id="custName" class="form-input" placeholder="Full name" />
+      <!-- Contact Details -->
+      <div class="field-wrap">
+        <label class="field-label">Patient / Customer Name *</label>
+        <input type="text" id="custName" class="field-input" placeholder="Enter complete name" />
       </div>
 
-      <div class="form-group">
-        <label class="form-label">Phone Number *</label>
-        <input type="tel" id="custPhone" class="form-input" placeholder="10-digit mobile number" />
+      <div class="field-wrap">
+        <label class="field-label">10-Digit Phone Number *</label>
+        <input type="tel" id="custPhone" class="field-input" placeholder="e.g. 9876543210" />
       </div>
 
-      <div class="form-group">
-        <label class="form-label">Delivery Address *</label>
-        <textarea id="custAddress" class="form-textarea" rows="2" placeholder="House/Flat No., Landmark, Area..."></textarea>
+      <div class="field-wrap">
+        <label class="field-label">Delivery Address & Landmark *</label>
+        <textarea id="custAddress" class="field-area" rows="2" placeholder="House/Shop no., Colony, Landmark..."></textarea>
       </div>
 
-      <!-- Submission Actions -->
-      <button type="button" class="btn-submit-primary" id="btnDirect" onclick="submitDirectOrder()">
+      <!-- Main Action Buttons -->
+      <button type="button" class="btn-main-order" id="btnDirect" onclick="submitDirectOrder()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        Confirm Order (Instant Alert)
+        Confirm Order (Instant Telegram Alert)
       </button>
 
-      <button type="button" class="btn-whatsapp-fallback" onclick="submitWhatsAppFallback()">
+      <button type="button" class="btn-wa-direct" onclick="submitWhatsAppFallback()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
         Order via WhatsApp Instead
       </button>
 
-      <!-- Feedback Banner -->
-      <div id="statusAlert" class="status-alert"></div>
+      <!-- Alert Notification -->
+      <div id="statusAlert" class="alert-box"></div>
     </div>
 
-    <!-- Right Column: International Trust & Compliance -->
+    <!-- Right Column: Compliance & Hospital Standards -->
     <div>
       <div class="card">
-        <h3 style="font-size: 16px; font-weight: 800; margin-bottom: 4px;">Standard Pharmacy Assurance</h3>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">Operated under strict healthcare protocol and retail pharmacy standards.</p>
+        <h3 style="font-size: 16px; font-weight: 800; color: var(--brand-dark); margin-bottom: 4px;">Standard Pharmacy Assurance</h3>
+        <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 18px;">All orders are dispensed under strict regulatory guidelines and cold-chain protocols.</p>
 
-        <div class="trust-grid">
-          <div class="trust-card">
-            <div class="icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <h4>100% Genuine Supplies</h4>
-              <p>Direct sourcing from authorized medical distributors only.</p>
-            </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-
-          <div class="trust-card">
-            <div class="icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-            </div>
-            <div>
-              <h4>Registered Pharmacist Review</h4>
-              <p>Every schedule drug order is verified before dispensing.</p>
-            </div>
-          </div>
-
-          <div class="trust-card">
-            <div class="icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h4>Express Doorstep Delivery</h4>
-              <p>Temperature-protected packaging right to your door.</p>
-            </div>
+          <div>
+            <h4>100% Genuine Medicines</h4>
+            <p>Sourced strictly from authorized wholesale distributors with valid batch numbers.</p>
           </div>
         </div>
 
-        <!-- Customer Testimonials -->
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <div class="review-text">"Prescription upload was seamless and the delivery was verified by a pharmacist in under an hour."</div>
-          <div class="review-author">— Local Verified Patient</div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+          </div>
+          <div>
+            <h4>Pharmacist Quality Check</h4>
+            <p>Prescription dosage, strength, and schedule compliance verified prior to dispatch.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Express Safe Delivery</h4>
+            <p>Tamper-evident packaging delivered straight to your home.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; padding: 14px; background: #F0FDF4; border-radius: var(--radius-sm); border: 1px solid #BBF7D0;">
+          <p style="font-size: 12px; color: #166534; font-weight: 600; line-height: 1.4;">
+            🌿 <strong>Emergency Assistance:</strong> In case of urgent medication needs, please use the direct telephone button for priority handling.
+          </p>
         </div>
       </div>
     </div>
@@ -692,12 +714,12 @@
   </div>
 
   <!-- Mobile Floating Sticky Hub -->
-  <div class="floating-bar">
-    <a href="tel:+917007000000" id="floatCallBtn" class="floating-call">
+  <div class="floating-hub">
+    <a href="tel:+917007000000" id="floatCallBtn" class="float-call">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Call Us
     </a>
-    <a href="https://wa.me/917007000000" id="floatWaBtn" target="_blank" class="floating-wa">
+    <a href="https://wa.me/917007000000" id="floatWaBtn" target="_blank" class="float-wa">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
       WhatsApp
     </a>
@@ -705,13 +727,13 @@
 
   <script>
     // -------------------------------------------------------------
-    // CONFIGURATION (PRE-FILLED WITH YOUR DETAILS)
+    // CONFIGURATION (PRE-FILLED WITH YOUR TELEGRAM DETAILS)
     // -------------------------------------------------------------
-    const PHARMACY_WHATSAPP = "917007000000"; // <-- Apna pura 10-digit number (91 ke sath) yahan confirm karein
+    const PHARMACY_WHATSAPP = "917007720653"; // Apna 10-digit number 91 ke saath check kar lein
     const TELEGRAM_BOT_TOKEN = "8441866785:AAFp4Twh64krFHYtyMN3TMKpk83DRFXBDXs";
     const TELEGRAM_CHAT_ID = "1541466517";
 
-    // Auto-update links for Call & WhatsApp
+    // Dynamic Binding for Call & WhatsApp
     document.getElementById('headerCallBtn').href = 'tel:+' + PHARMACY_WHATSAPP;
     document.getElementById('floatCallBtn').href = 'tel:+' + PHARMACY_WHATSAPP;
     document.getElementById('floatWaBtn').href = 'https://wa.me/' + PHARMACY_WHATSAPP;
@@ -775,7 +797,7 @@
       if (!validateFields(name, phone, address)) return;
 
       const btn = document.getElementById('btnDirect');
-      const statusAlert = document.getElementById('statusAlert');
+      const alertBox = document.getElementById('statusAlert');
       btn.disabled = true;
       btn.innerText = "Transmitting Order...";
 
@@ -813,24 +835,24 @@
         }
 
         if (response.ok) {
-          statusAlert.className = 'status-alert success';
-          statusAlert.style.display = 'block';
-          statusAlert.innerHTML = '✅ Order successfully transmitted! Our pharmacist will call you shortly for delivery confirmation.';
+          alertBox.className = 'alert-box success';
+          alertBox.style.display = 'block';
+          alertBox.innerHTML = '✅ Order successfully transmitted! Our pharmacist will call you shortly for delivery confirmation.';
           document.getElementById('custName').value = '';
           document.getElementById('custPhone').value = '';
           document.getElementById('custAddress').value = '';
           document.getElementById('medList').value = '';
           clearFile();
         } else {
-          throw new Error('Network issue');
+          throw new Error('Transmission failed');
         }
       } catch (err) {
-        statusAlert.className = 'status-alert error';
-        statusAlert.style.display = 'block';
-        statusAlert.innerHTML = '⚠️ Transmission failed. Please click below to order directly via WhatsApp.';
+        alertBox.className = 'alert-box error';
+        alertBox.style.display = 'block';
+        alertBox.innerHTML = '⚠️ Transmission failed. Please click below to order directly via WhatsApp.';
       } finally {
         btn.disabled = false;
-        btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg> Confirm Order (Instant Alert)`;
+        btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg> Confirm Order (Instant Telegram Alert)`;
       }
     }
 
